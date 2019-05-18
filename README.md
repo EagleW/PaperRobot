@@ -1,1 +1,1 @@
-# PaperRobot-Incremental-Draft-Generation-of-Scientific-Ideas
+# PaperRobot: Incremental Draft Generation of Scientific Ideas
