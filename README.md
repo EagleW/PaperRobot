@@ -34,7 +34,8 @@ Table of Contents
 ### New paper writing
 
 #### Preprocessing:
-Download and unzip the `data_pubmed_writing.zip`. Put `data` folder under the New paper writing folder.
+Download and unzip the `data_pubmed_writing.zip` from [Pubmed term, abstract, conclusion, title dataset](https://drive.google.com/open?id=1O91gX2maPHdIRUb9DdZmUOI5issRMXMY)
+. Put `data` folder under the New paper writing folder.
 
 #### Training
 
