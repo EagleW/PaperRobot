@@ -18,7 +18,7 @@ from collections import OrderedDict
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    '--data_dir', type=str, default='../paper_reading/'
+    '--data_dir', type=str, default='paper_reading/'
 )
 parser.add_argument(
     '--epochs', type=int, default=1000, help='Number of epochs to train.'

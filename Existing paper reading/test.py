@@ -19,7 +19,7 @@ from collections import OrderedDict
 parser = argparse.ArgumentParser()
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    '--data_dir', type=str, default='../paper_reading/'
+    '--data_dir', type=str, default='paper_reading/'
 )
 parser.add_argument(
     '--gpu', default='1', type=int, help='default is 1. set 0 to disable use gpu.'
