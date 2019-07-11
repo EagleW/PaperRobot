@@ -39,6 +39,8 @@ This dataset gathers three types of pairs: Title-to-Abstract (Training: 22,811/D
 
 ### Existing paper reading
 
+**CAUTION!! Because the dataset is quite large, the training and evaluation of link prediction model will be pretty slow.**
+
 #### Preprocessing:
 Download and unzip the `paper_reading.zip` from [PubMed Paper Reading  Dataset](https://drive.google.com/open?id=1DLmxK5x7m8bDPK5ZfAROtGpkWZ_v980Z)
 . Put `paper_reading` folder under the `Existing paper reading` folder.
