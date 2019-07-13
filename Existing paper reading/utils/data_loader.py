@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
-from .refactor_utils import generate_corrupt_triples, load_triple_dict
+from .utils import generate_corrupt_triples, load_triple_dict
 from torch.utils import data
 
 
