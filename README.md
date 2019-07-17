@@ -25,6 +25,7 @@ Table of Contents
 - [Pytorch 1.1](http://pytorch.org/)
 - Python 3.6 **CAUTION!! Model might not be saved and loaded properly under Python 3.5**
 - [NumPy 1.16.3](https://www.scipy.org/install.html)
+- [SciPy 1.2.1](https://www.scipy.org/install.html)
 - [NetworkX 2.3](https://networkx.github.io/documentation/stable/install.html)
 
 #### Data:
