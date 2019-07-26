@@ -1,6 +1,6 @@
 # Sample Output:
 
-Some human output might be truncated.
+**Some human output might be truncated.**
 
 ## Title:
 Cost-effectiveness of Pioglitazone in type 2 Diabetes patients with a history of macrovascular disease: a German perspective
