@@ -94,10 +94,21 @@ python input.py --data_path data/pubmed_abstract --model abstract_model/memory/b
 ```
 ## Citation
 ```
-@InProceedings{wang2019paperrobot,
-  author = 	"Wang, Qingyun and Huang, Lifu and Jiang, Zhiying and Knight, Kevin and Ji, Heng and Bansal, Mohit and Luan, Yi",
-  title = 	"PaperRobot: Incremental Draft Generation of Scientific Ideas",
-  booktitle = 	"Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
-  year = 	"2019"
+@inproceedings{wang-etal-2019-paperrobot,
+    title = "{P}aper{R}obot: Incremental Draft Generation of Scientific Ideas",
+    author = "Wang, Qingyun  and
+      Huang, Lifu  and
+      Jiang, Zhiying  and
+      Knight, Kevin  and
+      Ji, Heng  and
+      Bansal, Mohit  and
+      Luan, Yi",
+    booktitle = "Proceedings of the 57th Conference of the Association for Computational Linguistics",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P19-1191",
+    pages = "1980--1991"
 }
 ```
