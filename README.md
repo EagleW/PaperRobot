@@ -1,6 +1,7 @@
 # PaperRobot: Incremental Draft Generation of Scientific Ideas
 
-[[Arxiv]](https://arxiv.org/pdf/1905.07870.pdf) [[Sample Output]](https://eaglew.github.io/PaperRobot/)
+[PaperRobot: Incremental Draft Generation of Scientific Ideas](https://www.aclweb.org/anthology/P19-1191) 
+[[Sample Output]](https://eaglew.github.io/PaperRobot/)
 
 
 Accepted by 57th Annual Meeting of the Association for Computational Linguistics (ACL 2019)
