@@ -54,6 +54,10 @@ Hyperparameter can be adjusted as follows: For example, if you want to change th
 ```
 python train.py
 ```
+To resume training, you can appply the following command and put the previous model path after the `--model`
+```
+python train.py --cont --model models/GATA/best_dev_model.pth.tar
+```
 
 
 #### Test
@@ -75,10 +79,14 @@ Download and unzip the `data_pubmed_writing.zip` from [PubMed Term, Abstract, Co
 
 Put the type of data after the `--data_path`.  For example, if you want to train an abstract model, put `data/pubmed_abstract` after `--data_path`.
 Put the model directory after the `--model_dp`
-For more other options, please check the code.
 ```
 python train.py --data_path data/pubmed_abstract --model_dp abstract_model/
 ```
+To resume training, you can appply the following command and put the previous model path after the `--model`
+```
+python train.py --data_path data/pubmed_abstract --cont --model abstract_model/memory/best_dev_model.pth.tar
+```
+For more other options, please check the code.
 
 #### Test
 Put the finished model path after the `--model`
