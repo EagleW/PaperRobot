@@ -36,5 +36,5 @@ class GATA(nn.Module):
         gate_t = torch.sigmoid(gt)
         head = gate_h * hg + (1-gate_h) * ht
         tail = gate_t * tg + (1-gate_t) * tt
-        s = torch.abs(head + r - tail)
+        s = (head + r - tail)** 2
         return s
