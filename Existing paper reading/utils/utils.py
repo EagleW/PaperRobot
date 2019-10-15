@@ -103,16 +103,16 @@ def load_kg_embeddings(f):
 def load_triple_dict(f):
     fo = open(f)
     triples = []
-    triple_dict = defaultdict(lambda: defaultdict(set))
-    triple_dict_rev = defaultdict(lambda: defaultdict(set))
+    triple_dict = defaultdict(set)
+    triple_dict_rev = defaultdict(set)
     for line in fo:
         line = line.strip()
         ele = line.split('\t')
         if len(ele) == 3:
             ele = list(map(int, ele))
             triples.append(ele)
-            triple_dict[ele[0]][ele[1]].add(ele[2])
-            triple_dict_rev[ele[1]][ele[0]].add(ele[2])
+            triple_dict[ele[0]].add((ele[1], ele[2]))
+            triple_dict_rev[ele[1]].add((ele[0], ele[2]))
     return triples, triple_dict, triple_dict_rev
 
 
@@ -241,12 +241,11 @@ def get_subgraph(triples, triple_dict, whole_graph):
     for triple in triples:
         head = triple[0]
         tail = triple[1]
-        rel = triple[2]
         in_graph.add(tuple(triple))
-        for tri in triple_dict[head]:
+        for tri in triple_dict[head.item()]:
             single1 = (head, tri[0], tri[1])
             in_graph.add(single1)
-        for tri in triple_dict[tail]:
+        for tri in triple_dict[tail.item()]:
             single2 = (tail, tri[0], tri[1])
             in_graph.add(single2)
     in_kg = KnowledgeGraph()

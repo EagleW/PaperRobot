@@ -87,7 +87,6 @@ if args.load:
     num_ent = state['num_ent']
     num_rel = state['num_rel']
     id2ent = state['id2ent']
-    num_ent = state['num_ent']
     print("finish load")
 else:
     embedding_dim = args.nb_heads * args.hidden
@@ -185,7 +184,7 @@ def train(epoch):
                     ntt[0], ntt[1], ntt[2])
         loss_train = F.margin_ranking_loss(score_pos, score_neg, y, margin=args.margin)
         sys.stdout.write(
-            '%d batches processed. current batch loss: %f\r' %
+            '%d batches processed. current train batch loss: %f\r' %
             (batch_idx, loss_train.item())
         )
         eloss += loss_train.item()
@@ -230,7 +229,7 @@ def validate(epoch):
                     ntt[0], ntt[1], ntt[2])
         loss_train = F.margin_ranking_loss(score_pos, score_neg, y, margin=args.margin)
         sys.stdout.write(
-            '%d batches processed. current batch loss: %f\r' %
+            '%d batches processed. current valid batch loss: %f\r' %
             (batch_idx, loss_train.item())
         )
         eloss += loss_train.item()
