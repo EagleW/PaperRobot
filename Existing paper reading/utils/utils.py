@@ -180,7 +180,7 @@ def load_text(f, min_freq, max_len):
 
 def bern(triple_dict, triple_dict_rev, tri):
     h = tri[0]
-    t = tri[2]
+    t = tri[1]
     tph = len(triple_dict[h])
     hpt = len(triple_dict_rev[t])
     deno = tph+hpt
