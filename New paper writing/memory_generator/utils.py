@@ -22,6 +22,7 @@ class MemoryComponent(nn.Module):
         self.Wih_layers = clones(Wih, hop)
         Ws = nn.Linear(d_model, d_model)
         self.Ws_layers = clones(Ws, hop)
+        self.Wc = nn.Linear(1, d_model)
 
     def forward(self, query, src, src_mask, cov_mem=None):
         u = query.transpose(0, 1)
@@ -29,7 +30,11 @@ class MemoryComponent(nn.Module):
         for i in range(self.max_hops ):
             enc_proj = self.Wih_layers[i](src.view(batch_size * max_enc_len, -1)).view(batch_size, max_enc_len, -1)
             dec_proj = self.Ws_layers[i](u).expand_as(enc_proj)
-            e_t = self.vt_layers[i](torch.tanh(enc_proj + dec_proj).view(batch_size * max_enc_len, -1))
+            if cov_mem is not None:
+                cov_proj = self.Wc(cov_mem.view(-1, 1)).view(batch_size, max_enc_len, -1)
+                e_t = self.vt_layers[i](torch.tanh(enc_proj + dec_proj + cov_proj).view(batch_size * max_enc_len, -1))
+            else:
+                e_t = self.vt_layers[i](torch.tanh(enc_proj + dec_proj).view(batch_size * max_enc_len, -1))
             term_attn = e_t.view(batch_size, max_enc_len)
             del e_t
             term_attn.data.masked_fill_(src_mask.data.byte(), 0)
