@@ -25,7 +25,7 @@ Table of Contents
 
 - Python 3.6 **CAUTION!! Model might not be saved and loaded properly under Python 3.5**
 - Ubuntu 16.04/18.04 **CAUTION!! Model might not run properly on windows because [windows uses backslashes on path while linux/OS X uses forward slashes](https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/)**
-- [Pytorch 1.1](http://pytorch.org/)
+- [Pytorch 1.1](https://pytorch.org/get-started/previous-versions/)
 - [NumPy 1.16.3](https://www.scipy.org/install.html)
 - [SciPy 1.2.1](https://www.scipy.org/install.html)
 - [NetworkX 2.3](https://networkx.github.io/documentation/stable/install.html)
