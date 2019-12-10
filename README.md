@@ -23,8 +23,11 @@ Table of Contents
 
 #### Environment:
 
-- Python 3.6 **CAUTION!! Model might not be saved and loaded properly under Python 3.5**
-- Ubuntu 16.04/18.04 **CAUTION!! Model might not run properly on windows because [windows uses backslashes on path while linux/OS X uses forward slashes](https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/)**
+- Python 3.6 **CAUTION!! The model might not be saved and loaded properly under Python 3.5**
+- Ubuntu 16.04/18.04 **CAUTION!! The model might not run properly on windows because [windows uses backslashes on the path while Linux/OS X uses forward slashes](https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/)**
+
+#### Pacakges
+You can click the following links for detailed installation instructions.
 - [Pytorch 1.1](https://pytorch.org/get-started/previous-versions/)
 - [NumPy 1.16.3](https://www.scipy.org/install.html)
 - [SciPy 1.2.1](https://www.scipy.org/install.html)
@@ -36,7 +39,7 @@ Table of Contents
 This dataset gathers 14,857 entities, 133 relations, and entities corresponding tokenized text from PubMed. It contains 875,698 training pairs, 109,462 development pairs, and 109,462 test pairs.
 
 - [PubMed Term, Abstract, Conclusion, Title Dataset](https://drive.google.com/open?id=1O91gX2maPHdIRUb9DdZmUOI5issRMXMY)
-This dataset gathers three types of pairs: Title-to-Abstract (Training: 22,811/Development: 2095/Test: 2095), Abstract-to-Conclusion and Future work (Training: 22,811/Development: 2095/Test: 2095), Couclusion and Future work-to-Title (Training: 15,902/Development: 2095/Test: 2095) from PubMed. Each pair contains a pair of input and output as well as the corresponding terms(from original KB and link prediction results).
+This dataset gathers three types of pairs: Title-to-Abstract (Training: 22,811/Development: 2095/Test: 2095), Abstract-to-Conclusion and Future work (Training: 22,811/Development: 2095/Test: 2095), Conclusion and Future work-to-Title (Training: 15,902/Development: 2095/Test: 2095) from PubMed. Each pair contains a pair of input and output as well as the corresponding terms(from original KB and link prediction results).
 
 ## Quickstart
 
@@ -54,7 +57,7 @@ Hyperparameter can be adjusted as follows: For example, if you want to change th
 ```
 python train.py
 ```
-To resume training, you can appply the following command and put the previous model path after the `--model`
+To resume training, you can apply the following command and put the previous model path after the `--model`
 ```
 python train.py --cont --model models/GATA/best_dev_model.pth.tar
 ```
@@ -82,7 +85,7 @@ Put the model directory after the `--model_dp`
 ```
 python train.py --data_path data/pubmed_abstract --model_dp abstract_model/
 ```
-To resume training, you can appply the following command and put the previous model path after the `--model`
+To resume training, you can apply the following command and put the previous model path after the `--model`
 ```
 python train.py --data_path data/pubmed_abstract --cont --model abstract_model/memory/best_dev_model.pth.tar
 ```
