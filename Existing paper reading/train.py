@@ -261,6 +261,7 @@ if args.cont:
     best_dev = state['best_prec1']
 for epoch in range(args.epochs):
     train(start_epoch+epoch)
+    torch.cuda.empty_cache()
     current_valid = validate(start_epoch+epoch)
     torch.cuda.empty_cache()
     if current_valid < best_dev:
