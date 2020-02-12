@@ -37,7 +37,7 @@ class MemoryComponent(nn.Module):
                 e_t = self.vt_layers[i](torch.tanh(enc_proj + dec_proj).view(batch_size * max_enc_len, -1))
             term_attn = e_t.view(batch_size, max_enc_len)
             del e_t
-            term_attn.data.masked_fill_(src_mask.data.byte(), 0)
+            term_attn.data.masked_fill_(src_mask.data.byte(), -float('inf'))
             term_attn = F.softmax(term_attn, dim=1)
             term_context = term_attn.unsqueeze(1).bmm(src)
             u = u + term_context
