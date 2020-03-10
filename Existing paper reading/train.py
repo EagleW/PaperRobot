@@ -21,7 +21,7 @@ parser.add_argument(
     '--data_dir', type=str, default='paper_reading/'
 )
 parser.add_argument(
-    '--epochs', type=int, default=1000, help='Number of epochs to train.'
+    '--epochs', type=int, default=100, help='Number of epochs to train.'
 )
 parser.add_argument(
     '--lr', type=float, default=0.001, help='Initial learning rate.'
@@ -57,7 +57,7 @@ parser.add_argument(
     '--margin', type=int, default=1, help='Margin Value'
 )
 parser.add_argument(
-    '--patience', type=int, default=300, help='Patience'
+    '--patience', type=int, default=30, help='Patience'
 )
 parser.add_argument(
     '--load', action='store_true', help='Load dataset.'
