@@ -1,6 +1,6 @@
 # PaperRobot: Incremental Draft Generation of Scientific Ideas
 
-[PaperRobot: Incremental Draft Generation of Scientific Ideas](https://www.aclweb.org/anthology/P19-1191) 
+[PaperRobot: Incremental Draft Generation of Scientific Ideas](https://aclanthology.org//P19-1191) 
 [[Sample Output]](https://eaglew.github.io/PaperRobot/)
 
 
@@ -120,7 +120,7 @@ python input.py --data_path data/pubmed_abstract --model abstract_model/memory/b
     year = "2019",
     address = "Florence, Italy",
     publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/P19-1191",
+    url = "https://aclanthology.org/P19-1191",
     pages = "1980--1991"
 }
 ```
